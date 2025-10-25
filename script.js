@@ -1,9 +1,11 @@
 const pyramid = (string, integer, boolean) => {
-  let i = 0;
+  let i = -1;
+  let j = integer;
   let space = " ";
   while(i < integer) {
-    i++;
-    let pyramidConstruc = `${space.repeat(integer - i)} ${string.repeat(i)}`;
+    i+=2;
+    j-=1;
+    let pyramidConstruc = `${space.repeat(j)} ${string.repeat(i)}`;
     console.log(pyramidConstruc);
   };
 };
@@ -11,7 +13,7 @@ const pyramid = (string, integer, boolean) => {
 pyramid("O", 10)
 
 
-/* ---0---
-   --000--
-   -00000-
+/* ---0
+   --000
+   -00000
    0000000 */
